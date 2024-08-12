@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="styles.css" rel="stylesheet" type="text/css">
+    <title>Portfolio - Jaakko Koli</title>
+</head>
+<body>
+    <nav>
+          <h2>Portfolio ▚▟   </h2>
+
+          <li><a class="menu current" id="aintroduction" href="#introduction">Introduction</a></li>
+
+          <h1>Work and projects</h1>
+
+          <li><a class="menu sub" id="aproject1" href="#project1">Exploratory data analysis</a></li>
+
+          <li><a class="menu sub" id="aproject2" href="#project2">Data Science project</a></li>
+
+          <li><a class="menu sub" id="aproject3" href="#project3">HMC demo</a></li>
+
+          <li><a class="menu sub" id="aproject4" href="#project4">Master's thesis</a></li>
+
+          <li><a class="menu" id="acontact" href="#contact">Contact</a></li>
+    
+        </ul>
+      </nav>
+      <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sections = document.querySelectorAll("section");
+            const links = document.querySelectorAll("nav a");
+
+            const observerOptions = {
+                root: null, // Use the viewport as the root
+                rootMargin: "0px",
+                threshold: 0.51 // 51% of the element must be visible
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        links.forEach(link => {
+                            if(link.id==`a${sectionId}`){
+                                link.classList.add("current")
+                            }else{
+                                link.classList.remove("current")
+                            }
+                        })
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+      </script>
+
+      <section id="introduction">
+        <div id="introductiondiv">
+        <div id="text_left">
+          <h1>
+            Portfolio - Jaakko Koli
+          </h1>
+          <p>
+            Recent graduate with a Bachelor's degree in Computer Science and a Master's degree in Data Science. Proficient in Python, with expertise in R, JavaScript, React, and MatLab. Skilled in SQL and adept with tools like Jupyter Notebook and Git. Well-versed in machine learning and statistical analysis techniques. Quick learner with a proven ability to adapt to new technologies. Strong problem-solving and communication skills, eager to contribute to impactful projects.
+          </p>
+        </div>
+
+        <div id="picture">
+          <img src="picture.png" alt="" width="300">
+        </div>
+      </div>
+      </section>
+      
+
+      <section id="project1">
+        <div id="project1div">
+          <div id="picture_left"><img src="plot1.png" width=600></div>
+          <div id="text_right">
+            <h1>
+              Exploratory data analysis and a recommendation system
+            </h1>
+            <a href="https://github.com/JaakkoKoli/NetflixShowsEDA/blob/main/netflix.ipynb">[jupyter notebook]</a> <a href="https://www.kaggle.com/datasets/shivamb/netflix-shows">[data]</a>
+            <p>
+              This project starts with an exploratory data analysis on a data set containing data of different movies and shows on Netflix.
+            </p>
+            <hr>
+            <p>
+              <b>Technologies/skills used:</b> Python, data analysis, exploratory data analysis
+            </p>
+          </div>
+          
+        </div>
+      </section>
+      
+      <section id="project2">
+        <div id="project2div">
+          <div id="text_left">
+            <h1>
+              Data science project - improving calibration of a mass spectrometer
+            </h1>
+            <p>
+              Project done in a small group for the <a href="https://www.helsinki.fi/en/researchgroups/atmospheric-physical-chemistry">Atmospheric Physical Chemistry group, INAR (University of Helsinki)</a> where our goal was the imrove the mass calibration of the <a href="https://en.wikipedia.org/wiki/Orbitrap">Orbitrap mass spectrometer</a>.
+            </p>
+            <hr>
+            <p>
+              <b>Technologies/skills used:</b> Python, data analysis, machine learning, model designing, model testing
+            </p>
+          </div>
+          <div id="picture_right"><img src="plot2.png" width=600></div>
+        </div>
+      </section>
+
+      <section id="project3">
+        <div id="project3div">
+          <div id="picture_left"><img src="hmc.png" width=600></div>
+          <div id="text_right">
+            <h1>
+              Hamiltonian Monte Carlo demo
+            </h1>
+            <a href="https://github.com/JaakkoKoli/HMCdemo">[code]</a> <a href="https://main--hmcdemo.netlify.app/">[app]</a>
+            <p>
+              An interactive demonstration of the Hamiltonian Monte Carlo algorithm using JavaScript and Gatsby. 
+              The demo lets the user change different parameters such as the amount of Leapfrog integrator steps and immediately see how it affects the sampling.
+            </p>
+            <hr>
+            <p>
+              <b>Technologies/skills used:</b> JavaScript, Gatsby, React, statistics
+            </p>
+          </div>
+          
+        </div>
+      </section>
+
+      <section id="project4">
+        <div id="project4div">
+          <div id="text_left">
+            <h1>
+              Master's Thesis on Human exploration and extrapolation in conceptual and spatial tasks
+            </h1>
+            <a href="https://helka.helsinki.fi/discovery/fulldisplay?docid=alma9934672260606253&context=L&vid=358UOH_INST:VU1">[link]</a>
+            <p>
+              Master's thesis on analysing how humans explore conceptual and spatial domains. 
+              The analysis was done using data gathered from an experiment done by Wu et al. where the participants were tasked with performing a multi-armed bandit task.
+            </p>
+            <hr>
+            <p>
+              <b>Technologies/skills used:</b> Python, R, PySpark, distributed computing, behavioural/cognitive data analysis
+            </p>
+          </div>
+          <div id="picture_right"><img src="model.jpg" width=600></div>
+        </div>
+      </section>
+
+      <section id="contact">
+        <div id="contact">
+          <h1>Contact information</h1>
+          Email: jaakko.koli@gmail.com
+        </div>
+      </section>
+
+    </body>
+</html>

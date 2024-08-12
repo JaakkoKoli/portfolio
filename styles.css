@@ -1,0 +1,267 @@
+/* CSS Document */
+
+:root {
+  --main-accent: #6f3bb4;
+  --sub-accent-dark: #281344;
+  --sub-accent-light: #9e74d4;
+  --main-bg: #191925;
+  --font-colour: #ffffff;
+  --ff-body: 'Open Sans';
+  --ff-heading: 'Merriweather';
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  color: var(--font-colour);
+}
+
+html {
+  scroll-snap-type: y mandatory;
+}
+
+body {
+  text-align: center;
+  min-height: 100vh;
+  background-color: var(--main-bg);
+  font-family: var(--ff-body), times, serif, verdana, sans-serif;
+}
+
+img {
+  border: none;
+}
+
+hr {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+nav {
+  background-color: var(--main-accent);
+  font-family: var(--ff-heading), 'Tahoma', sans-serif;
+  box-shadow: 6px 6px 10px rgba(0, 0, 0, 0.25);
+  z-index: 9989;
+  position: fixed;
+  width: 18vw;
+  height: 100vh;
+  margin-top: 0;
+}
+
+nav ul {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav li {
+  height: 80px;
+}
+
+nav li:first-child{
+  margin-right: auto;
+}
+
+nav a {
+  height: 100%;
+  font-size: 150%;
+  text-decoration: none;
+  color: #000000;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  transition: all 600ms ease;
+}
+
+nav a.menu:hover {
+  background-color: var(--sub-accent-dark);
+}
+
+nav a.current {
+  background-color: var(--sub-accent-light);
+}
+
+nav a.sub{
+  margin-left: 20px;
+  font-size: 130%;
+  border-left: solid 3px #000000;
+}
+
+nav h2{
+  margin-top: 5px;
+  font-size: 2pc;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 250px;
+  z-index: 999;
+  background-color: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.sidebar li{
+  width: 100%;
+}
+
+.sidebar a{
+  width: 100%;
+}
+
+.menu-button{
+  display: none;
+}
+
+section{
+  height: 100vh;
+  scroll-snap-align: center;
+}
+
+div#picture{
+  height: 80vh;
+  position: absolute;
+  
+  animation: fadeInAnimation linear 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+#picture img{
+  position: absolute;
+  border: 20px solid var(--font-colour);
+  padding: 15px;
+  border-radius: 300px;
+  background-color: #373750;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    top: 0px;
+    right:  -20vw;
+    opacity: 0;
+  }
+  70% {
+    top: 0vh;
+    right: -10vw;
+    opacity: 0.5;
+  }
+  100% {
+    top: 0vh;
+    right: -10vw;
+    opacity: 1;
+  }
+}
+
+h1{
+  margin: 20px;
+}
+
+nav h1{
+  margin-left: 0px;
+}
+
+#text_left{
+  display: block;
+  left: 33vw;
+  width: 35vw;
+  height: 50vh;
+}
+
+#picture_right{
+  display: block;
+  width: 40vw;
+  height: 80vh;
+}
+
+#text_right{
+  display: block;
+  width: 35vw;
+  height: 50vh;
+}
+
+#picture_left{
+  display: block;
+  left: 28vw;
+  width: 40vw;
+  height: 80vh;
+}
+
+#picture_left img{
+  border-radius: 20px;
+}
+#picture_right img{
+  border-radius: 20px;
+}
+
+#introductiondiv{
+  position: absolute;
+  top: 20vh;
+  left: 20vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#project1div{
+  position: absolute;
+  top: 120vh;
+  left: 20vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#project2div{
+  position: absolute;
+  top: 220vh;
+  left: 20vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#project3div{
+  position: absolute;
+  top: 320vh;
+  left: 20vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+#project4div{
+  position: absolute;
+  top: 420vh;
+  left: 20vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
+p{
+  margin-top: 15px;
+}
+
+div a {
+  color: var(--main-accent);
+}
+
+div#contact{
+  position: relative;
+  left: 10vw;
+  top: 40vh;
+}
