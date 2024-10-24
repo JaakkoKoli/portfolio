@@ -82,7 +82,11 @@
 
       <section id="project1">
         <div id="project1div">
-          <div id="picture_left"><img src="plot1.png" width=600></div>
+            <div class="picture_frame">
+              <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle current">・</div><div class="img_toggle curr_toggle">・</div></div>
+              <img src="plot1-2.png", class="img_test curr_toggle  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+              <img src="plot1.png", class="img_test curr_toggle  right" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+            </div>
           <div id="text_right">
             <h1>
               Exploratory data analysis and a recommendation system
@@ -115,13 +119,21 @@
               <b>Technologies/skills used:</b> Python, data analysis, machine learning, model designing, model testing
             </p>
           </div>
-          <div id="picture_right"><img src="plot2.png" width=600></div>
+          <div class="picture_frame">
+            <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle current">・</div><div class="img_toggle curr_toggle">・</div></div>
+            <img src="plot2-2.png", class="img_test curr_toggle  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+            <img src="plot2.png", class="img_test curr_toggle  right" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+          </div>
         </div>
       </section>
 
       <section id="project3">
         <div id="project3div">
-          <div id="picture_left"><img src="hmc.png" width=600></div>
+          <div class="picture_frame">
+            <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle current">・</div><div class="img_toggle curr_toggle">・</div></div>
+            <img src="hmc-2.png", class="img_test curr_toggle  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+            <img src="hmc.png", class="img_test curr_toggle  right" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+          </div>
           <div id="text_right">
             <h1>
               Hamiltonian Monte Carlo demo
@@ -146,7 +158,7 @@
             <h1>
               Master's Thesis on Human exploration and extrapolation in conceptual and spatial tasks
             </h1>
-            <a href="https://helka.helsinki.fi/discovery/fulldisplay?docid=alma9934672260606253&context=L&vid=358UOH_INST:VU1">[link]</a>
+            <a href="https://helda.helsinki.fi/items/c0a7b8e4-a3da-4ca4-9c08-bf64a2a39068">[link]</a>
             <p>
               Master's thesis on analysing how humans explore conceptual and spatial domains. 
               The analysis was done using data gathered from an experiment done by Wu et al. where the participants were tasked with performing a multi-armed bandit task.
@@ -156,13 +168,21 @@
               <b>Technologies/skills used:</b> Python, R, PySpark, distributed computing, behavioural/cognitive data analysis
             </p>
           </div>
-          <div id="picture_right"><img src="model.jpg" width=600></div>
+          <div class="picture_frame">
+            <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle current">・</div><div class="img_toggle curr_toggle">・</div></div>
+            <img src="model-2.png", class="img_test curr_toggle  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+            <img src="model.jpg", class="img_test curr_toggle  right" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+          </div>
         </div>
       </section>
 
       <section id="project5">
         <div id="project5div">
-          <div id="picture_left"><img src="storageapp.png" width=600></div>
+          <div class="picture_frame">
+            <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle current">・</div><div class="img_toggle curr_toggle">・</div></div>
+            <img src="storageapp.png", class="img_test curr_toggle  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+            <img src="site.png", class="img_test curr_toggle  right" onclick="Array.from(document.getElementsByClassName('curr_toggle ')).forEach(x => x.classList.toggle('current'))">
+          </div>
           <div id="text_right">
             <h1>
               Storage tracking application and website redesign for a veterinary clinic
@@ -186,10 +206,10 @@
         <div id="contact">
           <h1>Contact information</h1>
           <p>
-            Email: jaakko.koli@gmail.com
+            <b>Email:</b> jaakko.koli@gmail.com
           </p>
           <p>
-            LinkedIn: <a href="https://www.linkedin.com/in/jaakko-koli/">linkedin.com/in/jaakko-koli</a>
+            <b>LinkedIn:</b> <a href="https://www.linkedin.com/in/jaakko-koli/">linkedin.com/in/jaakko-koli</a>
           </p>
           </div>
       </section>
