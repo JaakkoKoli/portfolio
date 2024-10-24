@@ -210,15 +210,12 @@ section{
 
 div#picture{
   height: 50vh;
+  right: -10vw;
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   border: none;
-  
-  animation: fadeInAnimation linear 1s;
-  animation-iteration-count: 1;
-  animation-fill-mode: forwards;
 }
 
 div#picture img::before{
