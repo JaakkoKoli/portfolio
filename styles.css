@@ -365,6 +365,16 @@ nav h1{
   align-content: center;
 }
 
+#project6div{
+  position: absolute;
+  top: 620vh;
+  left: 25vw;
+  justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+}
+
 p{
   margin-top: 15px;
 }
