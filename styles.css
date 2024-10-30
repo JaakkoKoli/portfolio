@@ -12,10 +12,72 @@
   --ff-heading: 'Merriweather';
 }
 
+
 *{
   margin: 0;
   padding: 0;
   color: var(--font-colour);
+}
+
+section::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -2;
+  background: linear-gradient(10deg, var(--sub-accent-dark) 0%, var(--main-accent) 100%);
+  clip-path: circle(30% at right 60%);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  left: 40vw;
+  top: 66vh;
+  width: 100px;
+  height: 100px;
+  border-top: 2px solid var(--sub-accent-light);
+  border-left: 3px solid var(--sub-accent-light);
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(53, 28, 85, 0.2);
+  transform: rotateZ(40deg);
+  z-index: -2;
+  background-color: var(--main-accent);
+}
+
+section::after {
+  content: "";
+  position: fixed;
+  left: 70vw;
+  top: 70vh;
+  width: 200px;
+  height: 200px;
+  z-index: -1;
+  border-top: 3px solid var(--sub-accent-light);
+  border-left: 3px solid var(--sub-accent-light);
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px rgba(53, 28, 85, 0.2);
+  background-color: var(--main-accent);
+}
+
+.language_selection{
+  display: flex;
+  padding: 5px;
+}
+
+.language_selection img {
+  width: 1.5vw;
+  padding: 3px;
+  &.current{
+    border: 1px solid var(--font-colour);
+  }
+}
+
+.language_selection a img:hover {
+  scale: 1.15;
+  transition: all 0.4s ease;
 }
 
 .picture_frame{
@@ -36,10 +98,6 @@
   box-shadow: 0px 0px 30px rgba(126, 95, 175, 0.1);
   border: 10px solid var(--main-accent);
   border-radius: 20px;
-  &.current{
-    box-shadow: 0px 0px 30px rgba(126, 95, 175, 0.3);
-  }
-
   &.left{
     transform: translateX(-300px) translateY(-50px) rotateY(-80deg) rotateZ(10deg);
     transition: all 1s ease;
@@ -236,7 +294,7 @@ div#picture img::before{
               linear-gradient(0deg, var(--sub-accent-dark) 0%, var(--main-accent) 100%) border-box;
   padding: 15px;
   background-color: #373750;
-  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes fadeInAnimation {
@@ -385,11 +443,12 @@ div a {
 
 div#contact{
   position: relative;
-  left: 50vw;
+  left: 45vw;
   top: 40vh;
   width: 25vw;
   padding: 25px;
   border-radius: 10px;
+  box-shadow: 5px 5px 15px rgba(29, 20, 44, 0.25);
   background-image: linear-gradient(310deg, var(--main-accent), var(--main-accent-low_sat));
 }
 #contact a{
