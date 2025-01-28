@@ -24,7 +24,7 @@
 
           <li><a class="menu sub" id="aproject5" href="#project5">Varastosovellus</a></li>
 
-          <li><a class="menu sub" id="aproject6" href="#project6">Discord-botti</a></li>
+          <li><a class="menu sub" id="aproject6" href="#project6">Chat-botti</a></li>
 
           <li><a class="menu" id="acontact" href="#contact">Yhteystiedot</a></li>
 
@@ -140,7 +140,7 @@
             <h1>
               Hamiltonian Monte Carlo demo
             </h1>
-            <a href="https://github.com/JaakkoKoli/HMCdemo">[code]</a> <a href="https://main--hmcdemo.netlify.app/">[app]</a>
+            <a href="https://github.com/JaakkoKoli/HMCdemo">[koodi]</a> <a href="https://main--hmcdemo.netlify.app/">[appi]</a>
             <p>
                 Interaktiivinen esittely Hamiltonian Monte Carlo -algoritmista JavaScriptillä ja Gatsbyllä. Demossa käyttäjä voi muuttaa eri parametreja, kuten Leapfrog-integraattorin askelmäärää, ja nähdä heti, miten tämä vaikuttaa näytteistykseen. Tämä tarjoaa arvokasta ymmärrystä algoritmin toiminnasta ja eri parametrien vaikutuksesta.
             </p>
@@ -159,7 +159,7 @@
             <h1>
               Maisterin tutkielma "Human exploration and extrapolation in conceptual and spatial tasks"
             </h1>
-            <a href="https://helda.helsinki.fi/items/c0a7b8e4-a3da-4ca4-9c08-bf64a2a39068">[link]</a>
+            <a href="https://helda.helsinki.fi/items/c0a7b8e4-a3da-4ca4-9c08-bf64a2a39068">[linkki]</a>
             <p>
                 Maisterintutkielma siitä, kuinka ihmiset tutkivat käsitteellisiä ja tilallisia alueita. Analyysi perustui Wu ym. kokeessa kerättyyn dataan, jossa osallistujat suorittivat monikätisen rosvopelin tehtävää.
             </p>
@@ -187,7 +187,7 @@
             <h1>
               Varastotietojen seurantasovellus ja verkkosivujen uudistus
             </h1>
-            <a href="http://maaritkoli.fi/">[website]</a>
+            <a href="http://maaritkoli.fi/">[nettisivu]</a>
             <p>
                 Loin sovelluksen eläinlääkäriklinikan varastotietojen seurantaan, jotta tuotteiden täydennystä voidaan optimoida ja varastotietojen tilastoja tarkastella nopeasti. 
                 
@@ -203,6 +203,29 @@
       </section>
 
       <section id="project6">
+        <div id="project6div">
+          <div id="text_left">
+            <h1>
+              Chat-botti verkkokauppaan käyttäen Llama 3.2
+            </h1>
+            <a href="https://github.com/JaakkoKoli/llama_project">[koodi]</a>
+            <p>
+              Chat-botti jota verkkokauppa voi käyttää auttamaan asiakkaita löytämään etsimänsä tuotteet. Tämä projekti keskittyi hyödyntämään LLM:iä ehkäisten yleensä näiden kanssa esiintyvät turvallisuusongelmat jotka syntyvät mallien monimuotoisten vastausten takia.
+            </p>
+            <hr>
+            <p>
+              <b>Technologies/skills used:</b> Python, Llama, NLP
+            </p>
+          </div>
+          <div class="picture_frame">
+            <div class="img_toggle_wrapper" style="transform: translateY(360px) translateX(200px);"><div class="img_toggle curr_toggle6 current">・</div><div class="img_toggle curr_toggle6">・</div></div>
+            <img src="chatbot1.png", class="img_test curr_toggle6  current left" onclick="Array.from(document.getElementsByClassName('curr_toggle6')).forEach(x => x.classList.toggle('current'))">
+            <img src="chatbot2.png", class="img_test curr_toggle6  right" onclick="Array.from(document.getElementsByClassName('curr_toggle6')).forEach(x => x.classList.toggle('current'))">
+          </div>
+        </div>
+      </section>
+
+      <!-- <section id="project6">
         <div id="project6div">
           <div id="text_left">
             <h1>
@@ -224,7 +247,7 @@
             <img src="bot-2.png", class="img_test curr_toggle6  right" onclick="Array.from(document.getElementsByClassName('curr_toggle6')).forEach(x => x.classList.toggle('current'))">
           </div>
         </div>
-      </section>
+      </section> -->
 
       <section id="contact">
         <div id="contact">
